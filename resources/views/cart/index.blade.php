@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            @php $total = 0; @endphp
+
             @foreach($cartItems as $id => $details)
                 <tr>
                     <td style="font-weight: bold;">{{ $details['name'] }}</td>
