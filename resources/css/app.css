@@ -293,8 +293,126 @@ footer {
   border-top: var(--border-width) solid var(--primary-color);
 }
 
+/* Extracted Inline Styles */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  border: var(--border-width) solid var(--border-color);
+  background-color: #fff;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 6px 6px 0 var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.hero-btn {
+  font-size: 1.5rem;
+  padding: 15px 40px;
+}
+
+.about-section {
+  background: var(--secondary-color);
+  color: #fff;
+  border: var(--border-width) solid var(--border-color);
+  padding: 50px;
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+  margin-bottom: 40px;
+}
+
+.about-section .retro-title {
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 0 var(--border-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .hero-section {
+    padding: 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 0 var(--primary-color);
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
   .product-show {
     flex-direction: column;
+    padding: 20px;
+  }
+
+  .cart-table-wrapper {
+    overflow-x: auto;
+    border: var(--border-width) solid var(--border-color);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);
+    margin-bottom: 30px;
+    background: #fff;
+  }
+  
+  .cart-table {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .cart-total {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .retro-modal-content {
+    padding: 20px;
+  }
+
+  .about-section {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
   }
 }

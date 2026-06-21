@@ -3,10 +3,10 @@
 @section('content')
 
 <!-- HERO SECTION -->
-<section class="hero-section" style="text-align: center; padding: 100px 20px; border: var(--border-width) solid var(--border-color); background-color: #fff; box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color); margin-bottom: 80px; margin-top: 20px;">
-    <h1 class="retro-title" style="font-size: 4rem; margin-bottom: 20px; text-shadow: 6px 6px 0 var(--primary-color);">RETROKICK</h1>
-    <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 40px; color: var(--secondary-color);">Step into the 90s with our exclusive retro collection.</p>
-    <a href="#products" class="btn" style="font-size: 1.5rem; padding: 15px 40px;">EXPLORE DROPS</a>
+<section class="hero-section">
+    <h1 class="hero-title retro-title">RETROKICK</h1>
+    <p class="hero-subtitle">Step into the 90s with our exclusive retro collection.</p>
+    <a href="#products" class="btn hero-btn">EXPLORE DROPS</a>
 </section>
 
 <!-- PRODUCTS SECTION -->
@@ -46,8 +46,8 @@
 </section>
 
 <!-- ABOUT / CONTACT SECTION -->
-<section id="about" style="background: var(--secondary-color); color: #fff; border: var(--border-width) solid var(--border-color); padding: 50px; box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color); margin-bottom: 40px;">
-    <h2 class="retro-title" style="margin-bottom: 30px; text-shadow: 3px 3px 0 var(--border-color);">CONNECT WITH US</h2>
+<section id="about" class="about-section">
+    <h2 class="retro-title">CONNECT WITH US</h2>
     
     <div style="display: flex; flex-wrap: wrap; gap: 40px;">
         <div style="flex: 1; min-width: 250px;">

@@ -4,35 +4,37 @@
 <h1 class="retro-title" style="margin-bottom: 30px;">YOUR GEAR</h1>
 
 @if(count($cartItems) > 0)
-    <table class="cart-table">
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach($cartItems as $id => $details)
+    <div class="cart-table-wrapper">
+        <table class="cart-table">
+            <thead>
                 <tr>
-                    <td style="font-weight: bold;">{{ $details['name'] }}</td>
-                    <td>Rp {{ number_format($details['price'], 0, ',', '.') }}</td>
-                    <td>{{ $details['quantity'] }}</td>
-                    <td>Rp {{ number_format($details['price'] * $details['quantity'], 0, ',', '.') }}</td>
-                    <td>
-                        <form action="{{ route('cart.remove', $id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn" style="background-color: #111; padding: 5px 10px; font-size: 0.8rem;">REMOVE</button>
-                        </form>
-                    </td>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+
+                @foreach($cartItems as $id => $details)
+                    <tr>
+                        <td style="font-weight: bold;">{{ $details['name'] }}</td>
+                        <td>Rp {{ number_format($details['price'], 0, ',', '.') }}</td>
+                        <td>{{ $details['quantity'] }}</td>
+                        <td>Rp {{ number_format($details['price'] * $details['quantity'], 0, ',', '.') }}</td>
+                        <td>
+                            <form action="{{ route('cart.remove', $id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn" style="background-color: #111; padding: 5px 10px; font-size: 0.8rem;">REMOVE</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 
     <div class="cart-total retro-title">
         TOTAL: <span style="color: var(--primary-color);">Rp {{ number_format($total, 0, ',', '.') }}</span>
